@@ -1,6 +1,6 @@
-FROM node:14-alpine AS todofrontend
+FROM node:14-alpine
 EXPOSE 3000
-WORKDIR /todo-app
+WORKDIR /todo-app/frontend
 ADD ./node_modules.tar.gz ./
 COPY . .
 ENTRYPOINT [ "npm", "start" ]

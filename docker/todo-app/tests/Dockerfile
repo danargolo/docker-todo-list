@@ -1,5 +1,5 @@
-FROM mjgargani/puppeteer:trybe1.0 AS todotests
-WORKDIR /todo-app
-ADD ./node_modules.tar.gz ./test
+FROM mjgargani/puppeteer:trybe1.0
+WORKDIR /todo-app/tests
+ADD ./node_modules.tar.gz ./
 COPY . .
-ENTRYPOINT [ "npm", "start" ]
+ENTRYPOINT [ "npm", "test" ]
